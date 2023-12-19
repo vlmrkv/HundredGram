@@ -30,6 +30,7 @@ class TapeFragment : Fragment() {
 
     private fun fragmentUpdateObserver() {
         viewModel.getUpdatedUI()
+
         viewModel.photoLiveData.observe(viewLifecycleOwner) { updatedPhoto ->
             binding?.imageOnTape?.setImageDrawable(updatedPhoto)
         }
